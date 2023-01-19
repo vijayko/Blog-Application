@@ -1,5 +1,9 @@
-# Django Project Boilerplate 
-This repository contains a boilerplate to start any Django project with Docker. 
+# Blog Application in Django 
+This repository contains a blog application built in Django with Docker. 
+
+# Features Implemented 
+- [x] A user can create, update, and delete a blog post.
+- [x] A user can signup/login.
 
 ## Getting started 
 
@@ -16,13 +20,4 @@ Steps:
 6. Run `docker-compose up -d --build` to install the dependencies in Docker container. 
 7. Run `docker-compose exec web python manage.py rename <currentprojectname> <newprojectname>`
 
-This project includes: 
-1. Setting module with env variables. 
-2. docker-compose.yml for env variables and Dockerfile 
 
-Project Structure: 
-<p align="left">
-    <p align="left">
-        <img src="https://github.com/vijayko/Django-Boiler-Plate/blob/main/project-structure.png" alt="Prject Structure" width="500">
-    </p>
-</p>    
