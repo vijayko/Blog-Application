@@ -15,7 +15,7 @@ class BlogListView(ListView):
     context_object_name = 'post_list'
     template_name = 'home.html'
 
-class BlogDetailView(FormMixin, DetailView): 
+class BlogDetailView(LoginRequiredMixin, FormMixin, DetailView): 
     model = Post 
     context_object_name = 'post'
     template_name = 'blog/blog_detail.html'
@@ -36,10 +36,11 @@ class BlogDetailView(FormMixin, DetailView):
             return self.form_valid(form)
         else: 
             return self.form_invalid(form)
-    
+
     def form_valid(self, form):
         form.save()
         return super(BlogDetailView, self).form_valid(form)
+
 
 class BlogCreateView(LoginRequiredMixin, CreateView):
     model = Post
