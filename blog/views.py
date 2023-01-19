@@ -15,7 +15,7 @@ class BlogListView(ListView):
     context_object_name = 'post_list'
     template_name = 'home.html'
 
-class BlogDetailView(LoginRequiredMixin, FormMixin, DetailView): 
+class BlogDetailView(FormMixin, DetailView): 
     model = Post 
     context_object_name = 'post'
     template_name = 'blog/blog_detail.html'
