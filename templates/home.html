@@ -10,6 +10,7 @@
     {% for post in post_list %}
         <div class="post-entry">
             <h2><a href="{% url 'post_detail_view' post.pk %}">{{ post.title }}</a></h2>
+            <p>by: {{ post.author }}</p>
             <p>{{ post.body }}</p>
         </div>
     {% endfor %}
