@@ -1,0 +1,16 @@
+<!-- templates/home.html -->
+
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    <h1>Blog List</h1>
+    {% for post in post_list %}
+        <div class="post-entry">
+            <h2><a href="{% url 'post_detail_view' post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.body }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
