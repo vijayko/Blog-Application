@@ -7,6 +7,7 @@ This repository contains a blog application built in Django with Docker.
 - [x] Only an author can edit/delete their post(s). 
 - [x] A user can post comments in each post. 
 - [x] Create a user profile for the users. 
+- [x] Supports TeX commands. 
 
 ## Getting started 
 
