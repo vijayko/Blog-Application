@@ -6,10 +6,10 @@
 
 {% block content %}
     <div class="row my-3 p-3">
-        <h1>This is the profile page for {{ user.username }}</h1>
+        <h2>This is the profile page for {{ user.username }}.</h2>
     </div>
     <div class="row my-3 p-3">
-        <img class="rounded-circle account-img" src="{{ user.userprofile.avatar.url }}" style="cursor: pointer;" width="50"/>
+        <img class="rounded-circle account-img" src="{{ user.userprofile.avatar.url }}" style="width:150px;height:auto;cursor: pointer;" />
     </div>
     {% if user_form.errors %}
         <div class="alert alert-danger alert-dismissible" role="alert">

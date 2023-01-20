@@ -22,7 +22,7 @@ class UserProfile(models.Model):
 
         img = Image.open(self.avatar.path)
 
-        if img.height > 100 or img.width > 100:
-            new_img = (100, 100)
+        if img.height > 1024 or img.width > 1024:
+            new_img = (1024, 1024)
             img.thumbnail(new_img)
             img.save(self.avatar.path)
